@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect } from 'react';
 
 function Input({ onAdd }) {
   const inputRef = useRef(null);
@@ -7,6 +7,8 @@ function Input({ onAdd }) {
     if (inputRef.current.value.trim() !== "") {
       onAdd(inputRef.current.value);
       inputRef.current.value = "";
+    } else {
+      alert("Bo'sh qatorni qo'shish mumkin emas!");
     }
   }
 
@@ -15,7 +17,7 @@ function Input({ onAdd }) {
       <input ref={inputRef} className='input' type="text" placeholder="Qoshish uchun so'z yoki gap kiriting" />
       <button className='add' onClick={handleClick}>Todo add</button>
     </>
-  )
+  );
 }
 
 function App() {
@@ -32,8 +34,14 @@ function App() {
     if (data.length < 11) {
       setData(prevData => [...prevData, newItem]);
     } else {
-      alert("Maksimum 11ta ma'lumot qo'sha olasiz");
+      alert("Siz maksimum 11 ta ma'lumot qo'shishingiz mumkin.");
     }
+  }
+
+  function handleDelete(index) {
+    const newData = [...data];
+    newData.splice(index, 1);
+    setData(newData);
   }
 
   return (
@@ -44,18 +52,19 @@ function App() {
             <Input onAdd={handleAdd} />
             <ul>
               {
-                data.map((el, index) => {
-                  return (
-                    <li key={index}>{el}</li>
-                  )
-                })
+                data.map((el, index) => (
+                  <li key={index}>
+                    {el}
+                    <img className='delete' src="./delete.svg" alt="delete" onClick={() => handleDelete(index)} />
+                  </li>
+                ))
               }
             </ul>
           </div>
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

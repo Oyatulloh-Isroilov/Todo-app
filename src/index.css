@@ -70,7 +70,7 @@ li {
   align-items: center;
   padding: 10px;
   background: #fff;
-  text-align: center;
+  padding-left: 190px;
   border-radius: 10px;
   transition: all 0.8s ease;
 }
@@ -78,4 +78,12 @@ li {
 li:hover {
   background: rgb(3, 26, 203);
   color: #fff;
+}
+
+.delete {
+  width: 24px;
+  height: 24px;
+  margin-top: -5px;
+  margin-left: 50px;
+  padding: 0px 0 0 0;
 }
