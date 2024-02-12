@@ -29,7 +29,11 @@ function App() {
   }, [data]);
 
   function handleAdd(newItem) {
-    setData(prevData => [...prevData, newItem]);
+    if (data.length < 11) {
+      setData(prevData => [...prevData, newItem]);
+    } else {
+      alert("Maksimum 11ta ma'lumot qo'sha olasiz");
+    }
   }
 
   return (
