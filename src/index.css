@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+}
+
+body {
+  background: #000;
+}
+
+.container {
+  position: relative;
+  max-width: 1200px;
+  width: 100%;
+  height: auto;
+  margin-left: 140px;
+  margin-right: auto;
+  margin-top: -10px;
+}
+.container-image {
+  padding: 20px;
+  position: absolute;
+  background-image: url(../public/background.jpg);
+  background-repeat: no-repeat;
+  top: 20px;
+  width: 1200px;
+  height: 690px;
+  border-radius: 10px;
+}
+
+.hero {
+  position: absolute;
+  left: 400px;
+}
+
+input {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  margin-right: 40px;
+  width: 400px;
+  text-align: center;
+}
+
+.add {
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  background: #fff;
+  transition: all 0.8s ease;
+  border: none;
+  color: rgb(3, 26, 203);
+}
+.add:hover {
+  color: #fff;
+  background: rgb(3, 26, 203);
+}
+
+li {
+  color: rgb(3, 26, 203);
+  margin-right: 140px;
+  gap: 30px;
+  margin-top: 10px;
+  align-items: center;
+  padding: 10px;
+  background: #fff;
+  text-align: center;
+  border-radius: 10px;
+  transition: all 0.8s ease;
+}
+
+li:hover {
+  background: rgb(3, 26, 203);
+  color: #fff;
+}
